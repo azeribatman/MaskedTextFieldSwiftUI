@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-public struct MaskedTextFieldSwiftUI: UIViewRepresentable {
+public struct MaskedTextField: UIViewRepresentable {
     public typealias UIViewType = UITextField
     
     @Binding private var rawText: String

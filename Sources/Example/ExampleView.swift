@@ -25,7 +25,7 @@ struct ExampleView: View {
         with field: Binding<TestField>
     ) -> some View {
         VStack {
-            MaskedTextFieldSwiftUI(
+            MaskedTextField(
                 rawText: field.rawText,
                 maskedText: field.maskedText,
                 maskType: field.maskType.wrappedValue,
