@@ -1,4 +1,4 @@
-# MaskedTextField-SwiftUI 🎭
+# MaskedTextFieldSwiftUI 🎭
 
 The MaskedTextField-SwiftUI package empowers developers to easily integrate customizable masked text input fields into their SwiftUI applications. Masked text fields provide a structured way for users to input data by enforcing a specific format, such as phone numbers, dates, or credit card numbers, while maintaining a clean and intuitive user experience.
 
@@ -28,16 +28,16 @@ Whether you're building a form for collecting user information, implementing a p
 
 #### Via Swift Package Manager
 
-In Xcode, within your project, select: `File > Swift Packages > Add Package Dependency`, then paste the URL https://github.com/darealkhan/MaskedTextField-SwiftUI.git and proceed to download it.
+In Xcode, within your project, select: `File > Swift Packages > Add Package Dependency`, then paste the URL https://github.com/darealkhan/MaskedTextFieldSwiftUI.git and proceed to download it.
 
 ## How to Use
 
-To use `MaskedTextField-SwiftUI`, you need to follow the simple steps below.
+To use `MaskedTextFieldSwiftUI`, you need to follow the simple steps below.
 
 1. Import the package into your project.
 
 ```Swift
-import MaskedTextField-SwiftUI
+import MaskedTextFieldSwiftUI
 ```
 
 2. Create two state variables to receive changes in the text field. `rawText` will contain the cleared text from masked text. You can also use `maskedText` if needed.
@@ -83,7 +83,7 @@ let config = MaskedTextFieldConfig(
 5. Lastly, create a text field with masked text and raw text as binding variables, along with configuration and mask type settings.
 
 ```Swift
- MaskedTextFieldSwiftUI(
+ MaskedTextField(
     rawText: $rawTest,
     maskedText: $maskedTest,
     maskType: maskType,
@@ -91,13 +91,13 @@ let config = MaskedTextFieldConfig(
 )
 ```
 
-## Example Project
+## Example
 
-#### Real-world example of how you can use `MaskedTextField-SwiftUI` can be found in the package files as well
+#### Real-world example of how you can use `MaskedTextFieldSwiftUI` can be found in the package files as well
 
 ```Swift
 import Foundation
-import MaskedTextField-SwiftUI
+import MaskedTextFieldSwiftUI
 import SwiftUI
 
 struct ExampleView: View {
@@ -118,7 +118,7 @@ struct ExampleView: View {
         with field: Binding<TestField>
     ) -> some View {
         VStack {
-            MaskedTextFieldSwiftUI(
+            MaskedTextField(
                 rawText: field.rawText,
                 maskedText: field.maskedText,
                 maskType: field.maskType.wrappedValue,
