@@ -90,3 +90,126 @@ let config = MaskedTextFieldConfig(
     config: config
 )
 ```
+
+## Example Project
+
+#### Real-world example of how you can use `MaskedTextField-SwiftUI` can be found in the package files as well
+
+```Swift
+import Foundation
+import MaskedTextField-SwiftUI
+import SwiftUI
+
+struct ExampleView: View {
+    @State private var testFields = TestField.getFields()
+    
+    var body: some View {
+        NavigationView {
+            List($testFields) { field in
+                Section(field.maskType.wrappedValue.maskString) {
+                    textFieldTestView(with: field)
+                }
+            }
+            .navigationTitle("Masked TextField 🎭")
+        }
+    }
+    
+    private func textFieldTestView(
+        with field: Binding<TestField>
+    ) -> some View {
+        VStack {
+            MaskedTextFieldSwiftUI(
+                rawText: field.rawText,
+                maskedText: field.maskedText,
+                maskType: field.maskType.wrappedValue,
+                config: field.config.wrappedValue
+            )
+            
+            Divider()
+            
+            Text("Raw text is: \(field.rawText.wrappedValue)")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .frame(
+                    maxWidth: .infinity,
+                    alignment: .leading
+                )
+            
+            Text("Masked text is: \(field.maskedText.wrappedValue)")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .frame(
+                    maxWidth: .infinity,
+                    alignment: .leading
+                )
+        }
+    }
+}
+
+struct TestField: Identifiable {
+    let id = UUID()
+    var rawText = ""
+    var maskedText = ""
+    var config: MaskedTextFieldConfig
+    var maskType: MaskType
+    
+    static func getFields() -> [TestField] {
+        return [
+            .init(
+                config: MaskedTextFieldConfig(
+                    placeHolder: "Credit Card Number"
+                ),
+                maskType: .init(
+                    maskString: "####-####-####-####",
+                    seperators: [
+                        .emptySpace,
+                        .customSeperator("-"),
+                    ]
+                )
+            ),
+            .init(
+                config: MaskedTextFieldConfig(
+                    placeHolder: "Number"
+                ),
+                maskType: .init(
+                    maskString: "(###)-###-##-##",
+                    seperators: [
+                        .emptySpace,
+                        .customSeperator("("),
+                        .customSeperator(")"),
+                        .customSeperator("-")
+                    ]
+                )
+            ),
+            .init(
+                config: MaskedTextFieldConfig(
+                    placeHolder: "Zip adress",
+                    autocapitalizationType: .allCharacters
+                ),
+                maskType: .init(
+                    maskString: "## ####",
+                    seperators: [
+                        .emptySpace
+                    ]
+                )
+            ),
+            .init(
+                config: MaskedTextFieldConfig(
+                    placeHolder: "Ip address"
+                ),
+                maskType: .init(
+                    maskString: "###.###.#.#",
+                    seperators: [
+                        .customSeperator(".")
+                    ]
+                )
+            )
+        ]
+    }
+}
+
+#Preview {
+    ExampleView()
+        .preferredColorScheme(.dark)
+}
+```
