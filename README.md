@@ -1,4 +1,4 @@
-# MaskedTextField-SwiftUI
+# MaskedTextField-SwiftUI 🎭
 
 The MaskedTextField-SwiftUI package empowers developers to easily integrate customizable masked text input fields into their SwiftUI applications. Masked text fields provide a structured way for users to input data by enforcing a specific format, such as phone numbers, dates, or credit card numbers, while maintaining a clean and intuitive user experience.
 
