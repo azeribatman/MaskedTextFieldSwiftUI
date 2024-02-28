@@ -100,7 +100,7 @@ import Foundation
 import MaskedTextFieldSwiftUI
 import SwiftUI
 
-struct ExampleView: View {
+struct ContentView: View {
     @State private var testFields = TestField.getFields()
     
     var body: some View {
