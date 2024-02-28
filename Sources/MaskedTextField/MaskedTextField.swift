@@ -19,7 +19,7 @@ public struct MaskedTextField: UIViewRepresentable {
     
     private(set) var textField = UITextField()
     
-    init(
+    public init(
         rawText: Binding<String>,
         maskedText: Binding<String> = .constant(""),
         maskType: MaskType,

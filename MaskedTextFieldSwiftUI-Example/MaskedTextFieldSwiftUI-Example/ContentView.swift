@@ -1,10 +1,12 @@
 //
-//  ExampleView.swift
-//
+//  ContentView.swift
+//  MaskedTextFieldSwiftUI-Example
 //
 //  Created by Ayxan Səfərli on 28.02.24.
+//
 
 import Foundation
+import MaskedTextFieldSwiftUI
 import SwiftUI
 
 struct ExampleView: View {

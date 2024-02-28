@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct MaskedTextFieldConfig {
+public struct MaskedTextFieldConfig {
     let placeHolder: String?
     let attributedPlaceholder: NSAttributedString?
     let font: UIFont?
@@ -17,7 +17,7 @@ struct MaskedTextFieldConfig {
     let autocorrectionType: UITextAutocorrectionType?
     let autocapitalizationType: UITextAutocapitalizationType?
     
-    init(
+    public init(
         placeHolder: String? = nil,
         attributedPlaceholder: NSAttributedString? = nil,
         font: UIFont? = nil,

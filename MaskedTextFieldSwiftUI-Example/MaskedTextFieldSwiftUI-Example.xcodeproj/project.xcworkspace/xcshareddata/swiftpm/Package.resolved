@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "maskedtextfieldswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/darealkhan/MaskedTextFieldSwiftUI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9670400bcd0ce994dc8ede3e2ea9453566ed2126"
+      }
+    }
+  ],
+  "version" : 2
+}
