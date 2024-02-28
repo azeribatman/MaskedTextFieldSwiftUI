@@ -209,7 +209,7 @@ struct TestField: Identifiable {
 }
 
 #Preview {
-    ExampleView()
+    ContentView()
         .preferredColorScheme(.dark)
 }
 ```
