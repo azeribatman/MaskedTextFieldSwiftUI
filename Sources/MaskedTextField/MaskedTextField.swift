@@ -17,7 +17,7 @@ public struct MaskedTextField: UIViewRepresentable {
     private var maskType: MaskType
     private var config: MaskedTextFieldConfig?
     
-    private(set) var textField = UITextField()
+    private var textField = UITextField()
     
     public init(
         rawText: Binding<String>,

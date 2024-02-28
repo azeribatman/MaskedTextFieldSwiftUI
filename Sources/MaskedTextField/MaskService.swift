@@ -35,15 +35,15 @@ extension MaskService {
 
 extension MaskService {
     struct ReturnValues {
-        public let maskedText: String
-        public let rawValue: String
+        let maskedText: String
+        let rawValue: String
     }
 }
 
 public struct MaskType {
-    let maskString: String
-    let seperators: [MaskSeperator]
-    let maskChar: Character
+    public let maskString: String
+    public let seperators: [MaskSeperator]
+    public let maskChar: Character
     
     var maxChar: Int {
         return maskString.filter({$0 == maskChar}).count

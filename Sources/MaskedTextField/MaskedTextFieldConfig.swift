@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 public struct MaskedTextFieldConfig {
-    let placeHolder: String?
-    let attributedPlaceholder: NSAttributedString?
-    let font: UIFont?
-    let textColor: UIColor?
-    let keyboardType: UIKeyboardType?
-    let autocorrectionType: UITextAutocorrectionType?
-    let autocapitalizationType: UITextAutocapitalizationType?
+    public let placeHolder: String?
+    public let attributedPlaceholder: NSAttributedString?
+    public let font: UIFont?
+    public let textColor: UIColor?
+    public let keyboardType: UIKeyboardType?
+    public let autocorrectionType: UITextAutocorrectionType?
+    public let autocapitalizationType: UITextAutocapitalizationType?
     
     public init(
         placeHolder: String? = nil,
